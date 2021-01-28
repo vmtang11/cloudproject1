@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! Welcome to my project 1.'
+    return 'Hello World! Welcome to my project 1. And now I can test continuous delivery...'
 
 @app.route('/name/<value>')
 def name(value):
