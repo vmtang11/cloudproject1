@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 from flask import jsonify
 
 app = Flask(__name__)
@@ -21,6 +21,11 @@ def html():
     <p>Hello</p>
     <p><b>World</b></p>
     """
+
+@app.route('/weather')
+def weather():
+    """Redirects to Durham weather page"""
+    return redirect('https://weather.com/weather/tenday/l/Durham+NC?canonicalCityId=63d89211f7bcfd0da57abeac727a32c0f62cb675513c8c4da3432fa06c0a8581')
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
