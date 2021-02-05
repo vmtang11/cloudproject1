@@ -27,5 +27,10 @@ def weather():
     """Redirects to Durham weather page"""
     return redirect('https://weather.com/weather/tenday/l/Durham+NC?canonicalCityId=63d89211f7bcfd0da57abeac727a32c0f62cb675513c8c4da3432fa06c0a8581')
 
+@app.route('/cloud')
+def cloud():
+    """Redirect to Cloud Computing home page"""
+    return redirect('https://noahgift.github.io/cloud-data-analysis-at-scale/')
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
